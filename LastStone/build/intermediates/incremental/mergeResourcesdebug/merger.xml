@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/deli/Documents/git/laststone/LastStone/src/main/res"><file name="laststone" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/drawable-hdpi/laststone.png" qualifiers="hdpi" type="drawable"/><file name="mz_1080_1620" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/drawable-hdpi/mz_1080_1620.png" qualifiers="hdpi" type="drawable"/><file name="other_1080_1920" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/drawable-hdpi/other_1080_1920.png" qualifiers="hdpi" type="drawable"/><file name="sii_1080_1800" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/drawable-hdpi/sii_1080_1800.png" qualifiers="hdpi" type="drawable"/><file name="activity_startup_2_3" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/layout/activity_startup_2_3.xml" qualifiers="" type="layout"/><file name="activity_startup_3_5" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/layout/activity_startup_3_5.xml" qualifiers="" type="layout"/><file name="activity_startup_9_16" path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/layout/activity_startup_9_16.xml" qualifiers="" type="layout"/><file path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/values/attrs.xml" qualifiers=""><declare-styleable name="ButtonBarContainerTheme">
+        <attr format="reference" name="metaButtonBarStyle"/>
+        <attr format="reference" name="metaButtonBarButtonStyle"/>
+    </declare-styleable></file><file path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/values/colors.xml" qualifiers=""><color name="black_overlay">#66000000</color></file><file path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/values/strings.xml" qualifiers=""><string name="dummy_button">Sure,Go!</string><string name="app_name">LastStone</string><string name="dummy_content">Are you ready?\nGO GO GO ooo</string></file><file path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/values/styles.xml" qualifiers=""><style name="ButtonBarButton"/><style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style><style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style></file><file path="/Users/deli/Documents/git/laststone/LastStone/src/main/res/values-v11/styles.xml" qualifiers="v11"><style name="FullscreenTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style><style name="FullscreenActionBarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style></file></source><source path="/Users/deli/Documents/git/laststone/LastStone/build/generated/res/rs/debug"/><source path="/Users/deli/Documents/git/laststone/LastStone/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug"><source path="/Users/deli/Documents/git/laststone/LastStone/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="metaButtonBarStyle"/><attr format="reference" name="metaButtonBarButtonStyle"/></declare-styleable></configuration></mergedItems></merger>

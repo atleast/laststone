@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LastStone</string>
+    <string name="dummy_button">Sure,Go!</string>
+    <string name="dummy_content">Are you ready?\nGO GO GO ooo</string>
+
+</resources>
