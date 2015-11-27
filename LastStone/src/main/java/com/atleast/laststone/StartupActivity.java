@@ -11,6 +11,7 @@ public class StartupActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //获取屏幕分辨率等信息
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width = dm.widthPixels;
@@ -21,13 +22,14 @@ public class StartupActivity extends Activity {
         float xDPI = dm.xdpi;
         float yDPI = dm.ydpi;
 
-
+        //已过期的方法，不建议使用
 //        WindowManager wm = this.getWindowManager();
 //        int width = wm.getDefaultDisplay().getWidth();
 //        int height = wm.getDefaultDisplay().getHeight();
 
         System.out.println("Window width = " + width + " and height = " + height + " Density = " + density + " and DensityDPI = " + densityDPI + " xDPI = " + xDPI + " and yDPI = " + yDPI);
 
+        //根据不同的屏幕分辨率，设置不同的页面布局
         if( (width == 480) && (height == 800) ){
 
             setContentView(R.layout.activity_startup_3_5);
@@ -44,10 +46,6 @@ public class StartupActivity extends Activity {
             System.out.println("Screen ratio: 9:16 (width == 1080) && (height == 1920)");
 
         }
-
-
-        final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
 
     }
 
