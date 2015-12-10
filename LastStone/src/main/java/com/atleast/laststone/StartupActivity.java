@@ -2,6 +2,7 @@ package com.atleast.laststone;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Entity;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
@@ -11,6 +12,16 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -173,6 +184,50 @@ public class StartupActivity extends Activity {
         public void onClick(View view) {
 
             System.out.println("Removed button is clicked!");
+
+            //发起HTTP GET请求
+            String url = "http://10.10.172.193/laststone.php?a=get_users&uid=10001";
+            String result;
+            HttpGet httpGet = new HttpGet(url);
+            try {
+
+                HttpResponse httpResponse = new DefaultHttpClient().execute(httpGet);
+
+                if(httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
+
+                    result = EntityUtils.toString(httpResponse.getEntity());
+                    System.out.println("HttpGet response  is: " + result);
+                }
+
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            //发起HTTP POST请求
+            HttpPost httpPost = new HttpPost(url);
+            List params = new ArrayList();
+            params.add(new BasicNameValuePair("a","get_users"));
+            params.add(new BasicNameValuePair("uid", "10001"));
+
+            try {
+
+                httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+                HttpResponse httpResponse = new DefaultHttpClient().execute(httpPost);
+
+                if(httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
+
+                    result = EntityUtils.toString(httpResponse.getEntity());
+                    System.out.println("HttpPost response is: " + result);
+                }
+
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            //解析json
+
+
+            //移除stone
             removedNum = 0;
 
             for(int i = 0; i < stoneStatus.length; i++){
@@ -187,6 +242,7 @@ public class StartupActivity extends Activity {
             if (removedNum == stoneStatus.length) {
 
                 System.out.println("All stones are removed!");
+
             }
 
         }
